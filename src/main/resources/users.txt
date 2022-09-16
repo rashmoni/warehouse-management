@@ -1,0 +1,3 @@
+manager1,6367c48dd193d56ea7b0baad25b19455e529f5ee,Manager1 User,MANAGER
+admin1,6367c48dd193d56ea7b0baad25b19455e529f5ee,Admin1 User,ADMIN
+cashier1,6367c48dd193d56ea7b0baad25b19455e529f5ee,John Doe,CASHIER

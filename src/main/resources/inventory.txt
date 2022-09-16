@@ -1,0 +1,8 @@
+IM1,Hammer,🔨,A nice hammer,10,300.00
+IM2,Tin Can,🥫,Big tin can,25,150.99
+IM3,Bucket,🪣,Awsome bucket,100,200.55
+IM4,Compact Disk,💽,Record your songs,20,100.50
+IM5,Cartboard Box,📦,Eco friendly cartboard box,100,10.50
+IM6,Radio,📻,Radio music,2000,10.99
+IM7,Saw,🪚,Robust saw for cutting wood,399,100.99
+IM8,Axe,🪓,Wood chopper axe,45,100.99

@@ -1,5 +1,8 @@
+import HomeMenu.HomeMenu;
+
 public class main {
     public static void main(String[] args) {
-        System.out.println("hello world!");
+        new HomeMenu();
     }
+
 }
