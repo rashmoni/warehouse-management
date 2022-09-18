@@ -3,19 +3,32 @@ package AdminMenu;
 
 import Utils.MenuPrintHandler;
 
+import java.util.List;
+
 public class AdminMenuView {
-    public AdminMenuView() {
-            MenuPrintHandler.clearScreen();
-            MenuPrintHandler.appTitle();
-        }
+    private List<String> menuOptions;
+    public AdminMenuView(List<String> menuOptions) {
+        this.menuOptions = menuOptions;
 
-        public void printUserNamePrompt() {
-            System.out.print("Please Enter Username: ");
-        }
-
-        public void printInvalidCred() {
-            System.out.println("⚠️ Invalid username/password, please try again: ");
-        }
-
+        MenuPrintHandler.clearScreen();
+        MenuPrintHandler.appTitle();
     }
+
+    public void printInvalidOption() {
+        System.out.println("⚠️ Invalid option");
+    }
+
+    public void printUserPrompt() {
+        System.out.print("Choose an option and press enter: ");
+    }
+
+
+    public void printOptions(){
+        MenuPrintHandler.printOptionList(menuOptions);
+    }
+
+}
+
+
+
 

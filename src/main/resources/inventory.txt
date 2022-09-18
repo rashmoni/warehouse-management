@@ -1,4 +1,4 @@
-IM1,Hammer,🔨,A nice hammer,10,300.00
+IM1,Hammer,🔨,A nice hammer,10,100.00
 IM2,Tin Can,🥫,Big tin can,25,150.99
 IM3,Bucket,🪣,Awsome bucket,100,200.55
 IM4,Compact Disk,💽,Record your songs,20,100.50
