@@ -1,6 +1,6 @@
 package Data;
 
-import Utils.GenerateReciptNum;
+import Utils.GenerateStrings;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,7 +17,7 @@ public class Transaction {
         this.id=id;
         this.sellQuantity= sellQuantity;
         this.price=price;
-        transactionID = GenerateReciptNum.GenerateReciptNum();
+        transactionID = GenerateStrings.GenerateReciptNum();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         date = new Date();
     }

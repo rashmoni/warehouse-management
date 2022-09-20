@@ -18,14 +18,11 @@ public class PlaceOrderView {
         System.out.print("Please choose and option: ");
     }
     public void userMessage() {
-        System.out.println("Please select an item you want to sell: ");
+        System.out.println("Please select an item you want to place order: ");
     }
-    public void chooseQuantity() {System.out.print("Please enter number of items for sell: ");}
-    public void invalidEntry(){
-        System.out.println("❌ Quantity not available");
-    };
-    public void sellSuccess(){
-        System.out.println("✅ Items successfully sold");
+    public void chooseQuantity() {System.out.print("Please enter number of items: ");}
+    public void orderSuccess(){
+        System.out.println("✅ Order placed! Pending Manager approval");
     };
 }
 

@@ -9,10 +9,11 @@ import Utils.ReadInventoryFile;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import PlaceOrder.*;
 
 public class CashierMenuModel {
     private List<Item> inventory;
-    private final List<String> menuOptions = List.of("Sell Item", "Return Item","Place Order");
+    private final List<String> menuOptions = List.of("Sell Item","Place Order","Return Item");
     public List<String> getMenuOptions() {
         return menuOptions;
     }
@@ -25,8 +26,8 @@ public class CashierMenuModel {
         switch (selectedOption) {
             case 0 -> new HomeMenu();
             case 1 -> new SaleItem(inventory,cashier);
-            //case 2 -> new ReturnItem();
-            //case 3 -> new PlaceOrder();
+            case 2 -> new PlaceOrder(inventory,cashier);
+            //case 3 -> new ReturnItem();
             default -> throw new IndexOutOfBoundsException();
         }
     }

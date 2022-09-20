@@ -1,11 +1,9 @@
 package PlaceOrder;
 
 import CashierMenu.CashierMenu;
-import Data.Item;
-import Data.Transaction;
+import Data.Order;
+import Data.OrderStatus;
 import Data.User;
-import SaleItem.SaleItemModel;
-import SaleItem.SaleItemView;
 import Utils.FileWriter;
 import Utils.UserInput;
 
@@ -33,47 +31,36 @@ public class PlaceOrderController {
             int selectedOption = Integer.parseInt(input);
 
             selectedItem = model.handleOption(selectedOption);
-            sellItem(selectedItem);
+            orderItem(selectedItem);
         } catch (NumberFormatException | IndexOutOfBoundsException | IOException exception) {
             requestUserInput();
         }
     }
 
-    public void sellItem(int selectedItem) {
+    public void orderItem(int selectedItem) {
         view.chooseQuantity();
         String input = scanner.nextLine();
         try {
             int selectedQuantity = Integer.parseInt(input);
 
-            handleQuantity(selectedItem, selectedQuantity);
+            handleOrder(selectedItem, selectedQuantity);
         } catch (NumberFormatException | IndexOutOfBoundsException exception) {
             requestUserInput();
         }
     }
 
-    private void handleQuantity(int selectedItem, int selectedQuantity) {
-        int availableItems = model.getInventory().get(selectedItem).getQuantity();
+    private void handleOrder(int selectedItem, int selectedQuantity) {
+        String orderFilepath = "src/main/resources/orders.txt";
         String id = model.getInventory().get(selectedItem).getId();
         String name = model.getInventory().get(selectedItem).getName();
-        String image = model.getInventory().get(selectedItem).getImage();
-        String description = model.getInventory().get(selectedItem).getDescription();
-        double price = model.getInventory().get(selectedItem).getPrice();
 
-        if (availableItems > selectedQuantity) {
-            int updatedQuantity = availableItems - selectedQuantity;
-            Item item = new Item(id, name, image, description, updatedQuantity, price);
-            String inventoryFilepath = "src/main/resources/inventory.txt";
-            FileWriter.updateRecord(item.getId(), item.toString(), inventoryFilepath);
-            Transaction transaction = new Transaction(id, selectedQuantity, price);
-            String transactionsFilepath = "src/main/resources/transactions.txt";
-            FileWriter.addNewRecord(transaction.toString(), transactionsFilepath);
-            view.sellSuccess();
-            input.pressEnterContinue();
-            new CashierMenu(cashier);
-        } else {
-            view.invalidEntry();
-            sellItem(selectedItem);
-        }
+        Order order = new Order(id,name,selectedQuantity, OrderStatus.PENDING);
+        System.out.println(order);
+        FileWriter.addNewRecord(order.toString(), orderFilepath);
+        view.orderSuccess();
+        input.pressEnterContinue();
+        new CashierMenu(cashier);
+
     }
 
 }
