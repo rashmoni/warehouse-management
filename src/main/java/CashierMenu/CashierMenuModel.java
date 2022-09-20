@@ -1,8 +1,10 @@
 package CashierMenu;
 
 import Data.Item;
+import Data.User;
 import HomeMenu.HomeMenu;
 import SaleItem.SaleItem;
+import Utils.LoginHandler;
 import Utils.ReadInventoryFile;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,11 +19,12 @@ public class CashierMenuModel {
     public List<Item> getInventory() {
         return inventory;
     }
+    private User cashier;
 
     public void handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
         switch (selectedOption) {
             case 0 -> new HomeMenu();
-            case 1 -> new SaleItem();
+            case 1 -> new SaleItem(inventory,cashier);
             //case 2 -> new ReturnItem();
             //case 3 -> new PlaceOrder();
             default -> throw new IndexOutOfBoundsException();
@@ -38,10 +41,16 @@ public class CashierMenuModel {
 
         return result;
     }
-
     private void readInventory() {
         ReadInventoryFile inventoryFile = new ReadInventoryFile("src/main/resources/inventory.txt");
         this.inventory = inventoryFile.getInventory();
     }
+
+    public User userLogin(){
+        LoginHandler handler = new LoginHandler();
+        cashier = handler.login();
+        return cashier;
+    };
+
 }
 

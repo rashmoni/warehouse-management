@@ -36,19 +36,15 @@ public class Item {
     public String getName() {
         return name;
     }
-
     public String getImage() {
         return image;
     }
-
     public String getDescription() {
         return description;
     }
-
     public int getQuantity() {
         return quantity;
     }
-
     public double getPrice() {
         return price;
     }
@@ -56,6 +52,6 @@ public class Item {
 
     @Override
     public String toString(){
-        return id+" "+name+" "+image+" " + description+ " "+quantity+" "+price;
+        return id+","+name+","+image+"," + description+ ","+quantity+","+price;
     }
 }

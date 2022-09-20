@@ -19,12 +19,9 @@ public class CashierMenuView {
     public void printInvalidOption() {
         System.out.println("⚠️ Invalid option");
     }
-
     public void printUserPrompt() {
         System.out.print("Choose an option and press enter: ");
     }
-
-
     public void printOptions() {
         MenuPrintHandler.printOptionList(menuOptions);
     }

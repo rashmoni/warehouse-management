@@ -1,13 +1,20 @@
 package CashierMenu;
 
 
+import Data.User;
+
 public class CashierMenu {
 
-    public CashierMenu() {
+    User cashier;
+    public CashierMenu(User cashier) {
         CashierMenuModel model = new CashierMenuModel();
         CashierMenuView view = new CashierMenuView(model.getMenuOptions());
-        CashierMenuController controller = new CashierMenuController(model, view);
 
-        controller.requestUserInput();
+        if (cashier==null){
+            cashier = model.userLogin();
+        }
+
+        CashierMenuController controller = new CashierMenuController(model, view, cashier);
+        controller.requestUserInput(cashier);
     }
 }

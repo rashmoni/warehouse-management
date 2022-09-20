@@ -24,7 +24,7 @@ public class ManagerMenuModel {
     public void handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
         switch (selectedOption) {
             case 0 -> new HomeMenu();
-            case 1 -> new SaleItem();
+            //case 1 -> new SaleItem();
             //case 2 -> new ReturnItem();
             //case 3 -> new PlaceOrder();
 
