@@ -3,7 +3,7 @@ package Utils;
 import java.util.Arrays;
 import java.util.List;
 
-public class Table {
+public class PrintTable {
     // Properties
     List<String> header;
     List<List<String>> body;
@@ -11,7 +11,7 @@ public class Table {
     String format;
 
     // Constructor
-    public Table(List<String> header, List<List<String>> body, List<Integer> columnWidths) {
+    public PrintTable(List<String> header, List<List<String>> body, List<Integer> columnWidths) {
         this.header = header;
         this.body = body;
         this.columnWidths = columnWidths;

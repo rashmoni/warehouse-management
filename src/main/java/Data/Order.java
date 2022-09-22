@@ -23,6 +23,15 @@ public class Order {
         date = new Date();
     }
 
+    public Order(String orderId, String itemId, Date date, String itemName, int orderQuantity, OrderStatus status) {
+        this.orderId=orderId;
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.date=date;
+        this.orderQuantity = orderQuantity;
+        this.status = status;
+    }
+
     public String getOrderId() {
         return orderId;
     }

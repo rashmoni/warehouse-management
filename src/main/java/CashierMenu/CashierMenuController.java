@@ -47,7 +47,7 @@ public class CashierMenuController {
         List<String> header = List.of("ID", "Name", "Image","Description","Quantity","Price");
         List<Integer> columnWidths = List.of(5,15,5,30,10,10);
         List<List<String>> data = model.parseData();
-        Table table = new Table(header,data,columnWidths);
+        PrintTable table = new PrintTable(header,data,columnWidths);
         table.showData();
     }
 }

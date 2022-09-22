@@ -2,7 +2,7 @@ package ManagerMenu;
 
 import Data.Item;
 import HomeMenu.HomeMenu;
-import SaleItem.SaleItem;
+import ViewOrder.*;
 import Utils.ReadInventoryFile;
 
 import java.io.IOException;
@@ -11,20 +11,17 @@ import java.util.List;
 
 public class ManagerMenuModel {
     private List<Item> inventory;
-    private final List<String> menuOptions = List.of("View order list", "View inventory list","View transaction list");
+    private final List<String> menuOptions = List.of("View order", "View inventory","View transaction");
     public List<String> getMenuOptions() {
         return menuOptions;
     }
-
     public List<Item> getInventory() {
         return inventory;
     }
-
-
     public void handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
         switch (selectedOption) {
             case 0 -> new HomeMenu();
-            //case 1 -> new SaleItem();
+            case 1 -> new ViewOrder();
             //case 2 -> new ReturnItem();
             //case 3 -> new PlaceOrder();
 
