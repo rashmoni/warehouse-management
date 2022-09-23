@@ -23,10 +23,10 @@ public class SaleItemView {
     public void chooseQuantity() {System.out.print("Please enter number of items for sell: ");}
     public void invalidEntry(){
         System.out.println("❌ Quantity not available");
-    };
+    }
     public void sellSuccess(){
         System.out.println("✅ Items successfully sold");
-    };
+    }
 }
 
 

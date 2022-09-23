@@ -13,7 +13,7 @@ public class HomeMenuModel {
 
     public void handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
         switch (selectedOption) {
-            case 1 -> new AdminMenu();
+            case 1 -> new AdminMenu(null);
             case 2 -> new CashierMenu(null);
             case 3 -> new ManagerMenu();
             default -> throw new IndexOutOfBoundsException();

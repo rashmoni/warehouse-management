@@ -1,7 +1,6 @@
 package PlaceOrder;
 
 import Data.Item;
-import Data.User;
 import HomeMenu.HomeMenu;
 
 import java.io.IOException;

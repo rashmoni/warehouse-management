@@ -5,7 +5,6 @@ import java.io.*;
 import java.util.Scanner;
 
 public class WriteToFile {
-    private static Scanner scanner;
     public static void updateRecord(String editTerm, String updatedText, String  filePath) {
         String tempFile = "temp.txt";
         File oldFile = new File(filePath);
@@ -14,7 +13,7 @@ public class WriteToFile {
             java.io.FileWriter fw = new java.io.FileWriter(tempFile, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            scanner = new Scanner(new File(filePath));
+            Scanner scanner = new Scanner(new File(filePath));
 
             while (scanner.hasNextLine()) {
                 String scannedLine = scanner.nextLine();

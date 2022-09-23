@@ -119,9 +119,5 @@ public class UserInput {
         in.nextLine();
     }
 
-    public void oprationSaveSuccess() {
-        System.out.print("Operation successfully completed, press enter to continue..");
-        in.nextLine();
-    }
 
 }

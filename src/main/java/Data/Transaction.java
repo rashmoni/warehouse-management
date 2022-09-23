@@ -1,16 +1,14 @@
 package Data;
 
 import Utils.GenerateRecOrdStrings;
-
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Transaction {
-    private String id;
-    private Date date;
-    private String transactionID;
-    private int sellQuantity;
-    private double price;
+    private final String id;
+    private final Date date;
+    private final String transactionID;
+    private final int sellQuantity;
+    private final double price;
 
 
     public Transaction(String id, int sellQuantity, double price){
@@ -18,7 +16,6 @@ public class Transaction {
         this.sellQuantity= sellQuantity;
         this.price=price;
         transactionID = GenerateRecOrdStrings.GenerateReciptNum();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         date = new Date();
     }
 

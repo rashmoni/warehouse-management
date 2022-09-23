@@ -1,8 +1,6 @@
 package Utils;
 
 
-import Data.Item;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -36,12 +34,6 @@ public class MenuPrintHandler {
         }
     }
 
-    public static void printInventoryTable(List<Item> inventory) {
-
-        for (int index = 0; index < inventory.size(); index++) {
-            System.out.println(inventory.get(index));
-        }
-    }
     private static void clearScreenUnix() {
         String clearScreenASCIICode = "\033[H\033[2J";
 

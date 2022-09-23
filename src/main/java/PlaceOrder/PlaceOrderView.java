@@ -23,7 +23,7 @@ public class PlaceOrderView {
     public void chooseQuantity() {System.out.print("Please enter number of items: ");}
     public void orderSuccess(){
         System.out.println("✅ Order placed! Pending Manager approval");
-    };
+    }
 }
 
 

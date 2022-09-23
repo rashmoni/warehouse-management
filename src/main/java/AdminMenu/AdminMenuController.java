@@ -1,8 +1,7 @@
 package AdminMenu;
 
 import Data.User;
-import Utils.*;
-
+import Utils.MenuPrintHandler;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -10,21 +9,21 @@ public class AdminMenuController {
     private final AdminMenuModel model;
     private final AdminMenuView view;
     private final Scanner scanner;
-    public AdminMenuController(AdminMenuModel model, AdminMenuView view) {
+    private final User admin;
+
+    public AdminMenuController(AdminMenuModel model, AdminMenuView view, User admin) {
         this.model = model;
         this.view = view;
+        this.admin = admin;
         this.scanner = new Scanner(System.in);
     }
 
     public void requestUserInput() {
-        LoginHandler handler = new LoginHandler();
-        User Admin = handler.login();
-        System.out.println("Welcome: " + Admin.getName());
+        System.out.println("Welcome: " + admin.name());
         System.out.println("Admin Menu: ");
         MenuPrintHandler.logOut();
         view.printOptions();
         view.printUserPrompt();
-
 
         String input = scanner.nextLine();
 

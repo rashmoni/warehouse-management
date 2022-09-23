@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ReadOrderFile {
-
     private Scanner scanner;
     private List<List<String>> orders;
 

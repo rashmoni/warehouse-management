@@ -6,7 +6,7 @@ import Utils.MenuPrintHandler;
 import java.util.List;
 
 public class AdminMenuView {
-    private List<String> menuOptions;
+    private final List<String> menuOptions;
     public AdminMenuView(List<String> menuOptions) {
         this.menuOptions = menuOptions;
 

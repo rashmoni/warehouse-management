@@ -12,10 +12,6 @@ public class HomeMenuView {
         printUserPrompt();
     }
 
-    public void printInvalidOption() {
-        System.out.println("⚠️ Invalid user");
-    }
-
     public void printUserPrompt() {
         System.out.print("Choose an option press enter: ");
     }

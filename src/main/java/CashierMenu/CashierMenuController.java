@@ -10,19 +10,17 @@ public class CashierMenuController {
     private final CashierMenuModel model;
     private final CashierMenuView view;
 
-    private final User user;
     private final Scanner scanner;
 
-    public CashierMenuController(CashierMenuModel model, CashierMenuView view, User user) {
+    public CashierMenuController(CashierMenuModel model, CashierMenuView view) {
         this.model = model;
         this.view = view;
-        this.user = user;
         this.scanner = new Scanner(System.in);
     }
 
 
     public void requestUserInput(User cashier) {
-        System.out.println("Welcome: "+cashier.getName());
+        System.out.println("Welcome: "+cashier.name());
         printInventoryTable();
         System.out.println("Cashier Menu: ");
         MenuPrintHandler.logOut();

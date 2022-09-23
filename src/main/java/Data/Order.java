@@ -2,16 +2,15 @@ package Data;
 
 import Utils.GenerateRecOrdStrings;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Order {
-    private String orderId;
-    private Date date;
-    private String itemId;
-    private String itemName;
-    private int orderQuantity;
-    private OrderStatus status;
+    private final String orderId;
+    private final Date date;
+    private final String itemId;
+    private final String itemName;
+    private final int orderQuantity;
+    private final OrderStatus status;
 
     public Order(String itemId, String itemName, int orderQuantity, OrderStatus status) {
         this.itemId = itemId;
@@ -19,7 +18,6 @@ public class Order {
         this.orderQuantity = orderQuantity;
         this.status = status;
         orderId = GenerateRecOrdStrings.GenerateOrderNum();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         date = new Date();
     }
 

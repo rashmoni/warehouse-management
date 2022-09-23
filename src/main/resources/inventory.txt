@@ -1,4 +1,4 @@
-IM1,Hammer,🔨,A nice hammer,85,100.0
+IM1,Hammer,🔨,A nice hammer,80,100.0
 IM2,Tin Can,🥫,Big tin can,90,150.99
 IM3,Bucket,🪣,Awsome bucket,200,200.55
 IM4,Compact Disk,💽,Record your songs,1900,100.5

@@ -1,12 +1,17 @@
 package AdminMenu;
 
+import Data.User;
+
 public class AdminMenu {
-    public AdminMenu() {
+    public AdminMenu(User admin) {
 
         AdminMenuModel model = new AdminMenuModel();
         AdminMenuView view = new AdminMenuView(model.getMenuOptions());
-        AdminMenuController controller = new AdminMenuController(model, view);
 
+        if (admin==null){
+            admin = model.userLogin();
+        }
+        AdminMenuController controller = new AdminMenuController(model, view, admin);
         controller.requestUserInput();
     }
 }

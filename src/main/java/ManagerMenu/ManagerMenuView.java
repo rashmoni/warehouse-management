@@ -5,7 +5,7 @@ import Utils.MenuPrintHandler;
 import java.util.List;
 
 public class ManagerMenuView {
-    private List<String> menuOptions;
+    private final List<String> menuOptions;
     public ManagerMenuView(List<String> menuOptions) {
         this.menuOptions = menuOptions;
 

@@ -8,8 +8,6 @@ import Utils.MenuPrintHandler;
 import java.io.IOException;
 import java.util.Scanner;
 
-import static Utils.MenuPrintHandler.printInventoryTable;
-
 public class ManagerMenuController {
     private final ManagerMenuModel model;
     private final ManagerMenuView view;
@@ -24,7 +22,7 @@ public class ManagerMenuController {
     public void requestUserInput() {
         LoginHandler handler = new LoginHandler();
         User manager = handler.login();
-        System.out.println("Welcome: " + manager.getName());
+        System.out.println("Welcome: " + manager.name());
         //printInventoryTable();
         System.out.println("Manager Menu: ");
         MenuPrintHandler.logOut();

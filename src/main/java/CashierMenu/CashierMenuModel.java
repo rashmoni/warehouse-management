@@ -17,9 +17,7 @@ public class CashierMenuModel {
     public List<String> getMenuOptions() {
         return menuOptions;
     }
-    public List<Item> getInventory() {
-        return inventory;
-    }
+
     private User cashier;
 
     public CashierMenuModel(User cashier){
@@ -55,7 +53,7 @@ public class CashierMenuModel {
         LoginHandler handler = new LoginHandler();
         cashier = handler.login();
         return cashier;
-    };
+    }
 
 }
 

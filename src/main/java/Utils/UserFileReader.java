@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UserFileReader {
-    private static String filepath = "src/main/resources/users.txt";
+    private static final String filepath = "src/main/resources/users.txt";
     public static List<String> readTextFile() {
         List<String> result = new ArrayList<>();
         try {
@@ -23,8 +23,7 @@ public class UserFileReader {
     }
 
     public static List<String> breakLineBySeparatorCharacter(String line, String separatorCharacter) {
-        List<String> result = List.of(line.split(separatorCharacter));
-        return result;
+        return List.of(line.split(separatorCharacter));
     }
 }
 

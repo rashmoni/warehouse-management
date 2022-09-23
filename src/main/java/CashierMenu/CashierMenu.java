@@ -5,7 +5,6 @@ import Data.User;
 
 public class CashierMenu {
 
-    User cashier;
     public CashierMenu(User cashier) {
         CashierMenuModel model = new CashierMenuModel(cashier);
         CashierMenuView view = new CashierMenuView(model.getMenuOptions());
@@ -14,7 +13,7 @@ public class CashierMenu {
             cashier = model.userLogin();
         }
 
-        CashierMenuController controller = new CashierMenuController(model, view, cashier);
+        CashierMenuController controller = new CashierMenuController(model, view);
         controller.requestUserInput(cashier);
     }
 }
