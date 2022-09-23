@@ -1,4 +1,4 @@
-MiNet’s Warehouse Management System
+# MiNet’s Warehouse Management System
 Java Project 3
 
 ## Table of contents
