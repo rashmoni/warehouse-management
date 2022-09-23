@@ -12,7 +12,8 @@ class FileReaderTest {
     @Test
     void readTextFile() {
         List<String> test = FileReader.readTextFile();
-        String testString = test.get(0).substring(0,7);
-        Assert.assertEquals("manager",testString);
+        Boolean dataPresent = test.isEmpty();
+
+        Assert.assertFalse(dataPresent);
     }
 }
