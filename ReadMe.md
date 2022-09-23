@@ -23,27 +23,33 @@ Project is created with:
 
 ## Project mamnagement Documents
 Project Management Documents:
-- [Usecase Diagram](https://github.com/rashmoni/ATM-Machine/blob/main/ProjectManagement/ATM-Machine-UC-Diagram.pdf)
-- [Class Diagram](https://github.com/rashmoni/ATM-Machine/blob/main/ProjectManagement/ATM-MachineClassDiagram.pdf)
-- [Product Backlog](https://github.com/rashmoni/ATM-Machine/blob/main/ProjectManagement/ATM-Machine_UsaCases.xlsx)
+- [Usecase Diagram](https://github.com/rashmoni/warehouse-management/blob/main/ProjectManagement/UseCaseDiagram.pdf)
+- [Class Diagram](https://github.com/rashmoni/warehouse-management/blob/main/ProjectManagement/ClassDiagram.pdf)
+- [Product Backlog](https://github.com/rashmoni/warehouse-management/blob/main/ProjectManagement/Product%20Backlog.xlsx)
 
 ## Run
 To run this application do the following steps.
-1. Make sure that details.txt file is present inside the assets folder.
-2. The assets folder should be present in the same location as that of the executable jar file.
-3. Some Demo user are already present in the System.
-    1. demo1
-    2. demo2
-    3. demo3
-4. Password for these demo users are abc123
-5. The password in the file is encrypted SHA value.
+1. git clone https://github.com/rashmoni/warehouse-management.git
+2. mvn clean install
+3. cd /target
+4. java -jar warehouse-management-1.0-SNAPSHOT.jar
+5. The password in the file is encrypted SHA1 value.
+6. Some sample userid and password are already present in the System.
+   1. admin1
+   2. cashier1
+   3. manager1
+7. Password for these demo users are "abc123"
 
-Folder structure -
-/ATM-Machine
-- assets/details.txt
-- ATM-Machine.jar
+
+## Folder structure -
+/warehouse-management
+- src/main/resources/inventory.txt
+- src/main/resources/orders.txt
+- src/main/resources/users.txt
+- src/main/resources/transactions.txt
+- warehouse-management-1.0-SNAPSHOT.jar
 
 ```
-$ cd ../ATM-Machine
-$ java -jar ATM-Machine.jar
+$ cd ../target
+$ java -jar warehouse-management-1.0-SNAPSHOT.jar
 ```
