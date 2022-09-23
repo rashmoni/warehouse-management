@@ -5,13 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class FileReaderTest {
 
     @Test
     void readTextFile() {
-        List<String> test = FileReader.readTextFile();
+        List<String> test = UserFileReader.readTextFile();
         Boolean dataPresent = test.isEmpty();
 
         Assert.assertFalse(dataPresent);

@@ -3,3 +3,4 @@ manager1,6367c48dd193d56ea7b0baad25b19455e529f5ee,Peter Stier,MANAGER
 admin1,6367c48dd193d56ea7b0baad25b19455e529f5ee,Rashmoni Dey,ADMIN
 cashier1,6367c48dd193d56ea7b0baad25b19455e529f5ee,John Doe,CASHIER
 cashier2,6367c48dd193d56ea7b0baad25b19455e529f5ee,Josefin Andre,CASHIER
+cashier3,6367c48dd193d56ea7b0baad25b19455e529f5ee,Ram Reddy,CASHIER

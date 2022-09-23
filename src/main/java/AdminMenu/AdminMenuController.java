@@ -2,6 +2,8 @@ package AdminMenu;
 
 import Data.User;
 import Utils.*;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AdminMenuController {
@@ -30,7 +32,7 @@ public class AdminMenuController {
             int selectedOption = Integer.parseInt(input);
 
             model.handleOption(selectedOption);
-        } catch (NumberFormatException | IndexOutOfBoundsException exception) {
+        } catch (NumberFormatException | IndexOutOfBoundsException | IOException exception) {
             view.printInvalidOption();
             requestUserInput();
         }

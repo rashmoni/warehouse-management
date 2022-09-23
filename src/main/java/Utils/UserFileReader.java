@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class FileReader {
+public class UserFileReader {
     private static String filepath = "src/main/resources/users.txt";
     public static List<String> readTextFile() {
         List<String> result = new ArrayList<>();

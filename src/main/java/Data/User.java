@@ -1,5 +1,7 @@
 package Data;
 
+import Utils.Encryptor;
+
 public class User {
     private String id;
     private String password;
@@ -25,8 +27,13 @@ public class User {
         return role;
     }
 
+    public String getPassword() {
+        String encPassword = Encryptor.encryptPassword(password);
+        return encPassword;
+    }
+
     @Override
     public String toString() {
-        return  (id + " " + name + " " + role);
+        return  (id + ","+ getPassword()+"," + name + "," + role);
     }
 }

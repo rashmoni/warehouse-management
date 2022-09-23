@@ -1,15 +1,16 @@
 package AdminMenu;
 
 import Data.Item;
-import Data.User;
+import HomeMenu.HomeMenu;
 import Utils.ReadInventoryFile;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdminMenuModel {
     private List<Item> inventory;
-    private final List<String> menuOptions = List.of("Hire employee", "Pay salary","View financial");
+    private final List<String> menuOptions = List.of("Add employee", "Pay salary","View financial");
     public List<String> getMenuOptions() {
         return menuOptions;
     }
@@ -19,8 +20,14 @@ public class AdminMenuModel {
     }
 
 
-    public void handleOption(int Selectedoption) {
-
+    public void handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
+        switch (selectedOption) {
+            case 0 -> new HomeMenu();
+            case 1 -> new AddEmployee();
+            //case 2 -> new PaySalay();
+            //case 3 -> new ViewFinancials();
+            default -> throw new IndexOutOfBoundsException();
+        }
     }
 
     public List<List<String>> parseData() {
