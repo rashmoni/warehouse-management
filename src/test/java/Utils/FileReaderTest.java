@@ -1,6 +1,7 @@
 package Utils;
 
-import junit.framework.Assert;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -12,6 +13,6 @@ class FileReaderTest {
         List<String> test = UserFileReader.readTextFile();
         Boolean dataPresent = test.isEmpty();
 
-        Assert.assertFalse(dataPresent);
+        Assertions.assertFalse(dataPresent);
     }
 }

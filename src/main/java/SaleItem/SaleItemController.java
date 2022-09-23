@@ -29,7 +29,7 @@ public class SaleItemController {
         try {
             int selectedOption = Integer.parseInt(input);
 
-            selectedItem = model.handleOption(selectedOption);
+            selectedItem = model.handleOption(selectedOption, cashier);
             sellItem(selectedItem);
         } catch (NumberFormatException | IndexOutOfBoundsException | IOException exception) {
             requestUserInput();

@@ -1,6 +1,8 @@
 package SaleItem;
 
+import CashierMenu.CashierMenu;
 import Data.Item;
+import Data.User;
 import HomeMenu.HomeMenu;
 
 import java.io.IOException;
@@ -24,9 +26,9 @@ public class SaleItemModel {
     public List<String> getsaleItemOptions() {
         return saleItemOptions;
     }
-    public int handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
+    public int handleOption(int selectedOption, User cashier) throws IndexOutOfBoundsException, IOException {
         if (selectedOption == 0) {
-            new HomeMenu();
+            new CashierMenu(cashier);
         } else if (selectedOption <= saleItemOptions.size()) {
             return (selectedOption - 1);
         } else throw new IndexOutOfBoundsException();
