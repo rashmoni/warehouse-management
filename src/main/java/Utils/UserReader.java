@@ -4,7 +4,6 @@ import Data.User;
 import java.util.List;
 
 public class UserReader {
-
     public User getUser(String userName, String password) {
         User user = null;
         List<String> allUsers = FileReader.readTextFile();

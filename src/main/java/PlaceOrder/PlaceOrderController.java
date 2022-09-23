@@ -4,7 +4,7 @@ import CashierMenu.CashierMenu;
 import Data.Order;
 import Data.OrderStatus;
 import Data.User;
-import Utils.FileWriter;
+import Utils.WriteToFile;
 import Utils.UserInput;
 
 import java.io.IOException;
@@ -56,7 +56,7 @@ public class PlaceOrderController {
 
         Order order = new Order(id,name,selectedQuantity, OrderStatus.PENDING);
         System.out.println(order);
-        FileWriter.addNewRecord(order.toString(), orderFilepath);
+        WriteToFile.addNewRecord(order.toString(), orderFilepath);
         view.orderSuccess();
         input.pressEnterContinue();
         new CashierMenu(cashier);

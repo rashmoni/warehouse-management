@@ -1,6 +1,6 @@
 package Data;
 
-import Utils.GenerateStrings;
+import Utils.GenerateRecOrdStrings;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,7 +18,7 @@ public class Order {
         this.itemName = itemName;
         this.orderQuantity = orderQuantity;
         this.status = status;
-        orderId = GenerateStrings.GenerateOrderNum();
+        orderId = GenerateRecOrdStrings.GenerateOrderNum();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         date = new Date();
     }

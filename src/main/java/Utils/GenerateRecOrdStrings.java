@@ -2,7 +2,7 @@ package Utils;
 
 import java.util.Random;
 
-public class GenerateStrings {
+public class GenerateRecOrdStrings {
         public static String GenerateReciptNum() {
             String accountNum = "";
             Random rand = new Random();

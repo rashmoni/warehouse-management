@@ -22,6 +22,10 @@ public class CashierMenuModel {
     }
     private User cashier;
 
+    public CashierMenuModel(User cashier){
+        this.cashier=cashier;
+    }
+
     public void handleOption(int selectedOption) throws IndexOutOfBoundsException, IOException {
         switch (selectedOption) {
             case 0 -> new HomeMenu();

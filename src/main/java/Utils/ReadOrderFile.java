@@ -20,7 +20,6 @@ public class ReadOrderFile {
         } catch (FileNotFoundException | ParseException e) {
             System.out.println("File now found"+e);
         }
-
     }
 
     public List<List<String>> getOrders() {

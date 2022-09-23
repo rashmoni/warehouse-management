@@ -10,15 +10,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ReadInventoryFile {
-    private  Scanner scanner;
-    private  List<Item> inventory;
+    private Scanner scanner;
+    private List<Item> inventory;
 
-    public ReadInventoryFile(String pathname)  {
+    public ReadInventoryFile(String pathname) {
         try {
             File file = new File(pathname);
             scanner = new Scanner(file);
             inventory = generateInventory();
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println(e);
         }
 
@@ -38,7 +38,7 @@ public class ReadInventoryFile {
             String name = parsedData.get(1);
             String image = parsedData.get(2);
             String description = parsedData.get(3);
-            int quantity  = Integer.parseInt(parsedData.get(4));
+            int quantity = Integer.parseInt(parsedData.get(4));
             double price = Double.parseDouble(parsedData.get(5));
             Item newItem = new Item(id, name, image, description, quantity, price);
 

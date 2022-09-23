@@ -4,7 +4,7 @@ package Utils;
 import java.io.*;
 import java.util.Scanner;
 
-public class FileWriter {
+public class WriteToFile {
     private static Scanner scanner;
     public static void updateRecord(String editTerm, String updatedText, String  filePath) {
         String tempFile = "temp.txt";
@@ -39,9 +39,10 @@ public class FileWriter {
     public static void addNewRecord(String textToSave, String filePath) {
         File file = new File(filePath);
         try {
-            java.io.FileWriter writer = new java.io.FileWriter(file, true);
+            FileWriter writer = new FileWriter(file, true);
             PrintWriter dataOut = new PrintWriter(writer);
             dataOut.print("\n" + textToSave);
+            dataOut.flush();
             dataOut.close();
             writer.close();
         } catch (IOException e) {

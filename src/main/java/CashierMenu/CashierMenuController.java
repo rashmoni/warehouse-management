@@ -13,7 +13,6 @@ public class CashierMenuController {
     private final User user;
     private final Scanner scanner;
 
-
     public CashierMenuController(CashierMenuModel model, CashierMenuView view, User user) {
         this.model = model;
         this.view = view;

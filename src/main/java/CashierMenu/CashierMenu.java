@@ -7,7 +7,7 @@ public class CashierMenu {
 
     User cashier;
     public CashierMenu(User cashier) {
-        CashierMenuModel model = new CashierMenuModel();
+        CashierMenuModel model = new CashierMenuModel(cashier);
         CashierMenuView view = new CashierMenuView(model.getMenuOptions());
 
         if (cashier==null){

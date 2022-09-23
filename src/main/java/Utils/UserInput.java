@@ -2,7 +2,6 @@ package Utils;
 
 
 import java.io.Console;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInput {
@@ -39,8 +38,7 @@ public class UserInput {
 
         while ((strInput.equals("") || (strInput.equals(" ")))) {
             System.out.print("\u26A0 Invalid Entry, Please enter value: ");
-            strInput = in.nextLine();
-            strInput.trim();
+            strInput = in.nextLine().trim();
         }
         return strInput;
     }
@@ -90,7 +88,7 @@ public class UserInput {
         }
     }
 
-    //for intelliJ
+    //below code is only when running from intelliJ
     private String terminalPasswordReader(String type) {
         String passwordString;
         String rePasswordString;
@@ -125,6 +123,5 @@ public class UserInput {
         System.out.print("Operation successfully completed, press enter to continue..");
         in.nextLine();
     }
-
 
 }
